@@ -13,8 +13,9 @@ public class Main {
         GeoCalculator geoCalculator = new GeoCalculator();
         CurrencyConverter converter = new CurrencyConverter();
         RangeCalculator rangeCalculator = new RangeCalculator();
+        VatCalculator vatCalculator = new VatCalculator();
 
-        System.out.println("CALCULATOR");
+        System.out.println("CALCULATOR\n************************");
         calculator.addition(10, 5);
         System.out.println("Result (+): " + calculator.getResult());
         calculator.subtraction(17, 4);
@@ -24,7 +25,7 @@ public class Main {
         calculator.division(15, 3);
         System.out.println("Result (/): " + calculator.getResult());
 
-        System.out.println("\nGeoCALCULATOR");
+        System.out.println("\nGeoCALCULATOR\n************************");
         geoCalculator.getAreaSquare(4);
         System.out.println("Result Area Square: \t" + geoCalculator.getResult() + " cm2.");
         geoCalculator.getAreaRectangle(3, 4);
@@ -37,24 +38,25 @@ public class Main {
         System.out.println("Result Curcumfence Rectangle: \t" + geoCalculator.getResult() + " cm2.");
         geoCalculator.getCircumfenceCircle(3);
         System.out.println("Result Curcumfence Circle: \t" + geoCalculator.getResult() + " cm2.");
-        System.out.println("\nCurrencyConverter");
+        System.out.println("\nCurrencyConverter\n************************");
 
         converter.convert(10, "USD");
         converter.convert(10, "CHF");
         converter.convert(10, "GBP");
 
-        System.out.println("\nRangeCalculator");
+        System.out.println("\nRangeCalculator\n************************");
         System.out.println("You have gas for "+ rangeCalculator.getRemainingRange(8, 80) + " more kilometers.");
         System.out.println("You have gas for "+ rangeCalculator.getRemainingRange(8, 30) + " more kilometers.");
 
+        System.out.println("\nVAT Calculator\n************************");
+        vatCalculator.getGrossPrice(100, "AT");
+        vatCalculator.getGrossPrice(100, "ch");
+        vatCalculator.getNetPrice(120, "at");
+        vatCalculator.getNetPrice(100, "ch");
+        vatCalculator.getGrossPrice(92.85051067780873, "ch");
+
     }
-//    private ArrayList<ExchangeRate> getExchangeRates(){
-//        ArrayList<ExchangeRate> list = new ArrayList<>();
-//        list.add(new ExchangeRate("USD", 1.09));
-//        list.add(new ExchangeRate("CHF", 1.05));
-//        list.add(new ExchangeRate("GBP", 0.87));
-//
-//        return list;
+
 }
 
 

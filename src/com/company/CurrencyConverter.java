@@ -6,8 +6,7 @@ public class CurrencyConverter extends Calculator {
 
     ArrayList<ExchangeRate> exchangeRates;
 
-    public CurrencyConverter(/*ArrayList<ExchangeRate> exchangeRates*/) {
-        //this.exchangeRates = exchangeRates;
+    public CurrencyConverter() {
         this.exchangeRates = getExchangeRates();
     }
 
@@ -24,7 +23,7 @@ public class CurrencyConverter extends Calculator {
         }
 
         if(toRate != null){
-            // System.out.println(amount * toRate.getExchangeRate());
+             System.out.println(amount * toRate.getExchangeRate());
             System.out.println(amount + " Euro convertet to " +toCurrency+ ": "+  multiplication(amount, toRate.getExchangeRate()));
         }
     }
